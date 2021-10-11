@@ -3,6 +3,8 @@
     <nav class="navbar">
       <a><router-link :to="{name: 'inicio'}">Inicio</router-link></a>
       <a><router-link :to="{name: 'Busqueda'}">Busqueda</router-link></a>
+      <a><router-link :to="{name: 'Venta'}">Venta</router-link></a>
+      <a><router-link :to="{name: 'Total'}">Total</router-link></a>
     </nav>
 
     <transition name="vista">

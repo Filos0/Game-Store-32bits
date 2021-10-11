@@ -1,28 +1,24 @@
 <template>
   <div class="busquedaBox">
-    <h1>Búsqueda de Juegos</h1>
-    <input type="text" v-model="busqueda" />
+    <h1>Venta de Juegos</h1>
+
     <h2>
-      Número de Juegos Disponibles:
+      Cantidad de juegos con stock:
       <span v-text="juegosDisponibles"></span>
     </h2>
-    <h2>
-      Cantidad de stock total de Juegos:
-      <span v-text="juegoTotales"></span>
-    </h2>
 
-    <Lista
+    <ListaVenta
       :busquedas="busca"
       :listaTotal="cantidadJuegosTotales"
       :selUsuario="busqueda"
-    ></Lista>
+    ></ListaVenta>
   </div>
 </template>
 <script>
 import {mapGetters} from "vuex";
-import Lista from "./Lista.vue";
+import ListaVenta from "./ListaVenta.vue";
 export default {
-  name: "Busqueda",
+  name: "Venta",
   data() {
     return {
       busqueda: "",
@@ -30,7 +26,7 @@ export default {
     };
   },
   components: {
-    Lista,
+    ListaVenta,
   },
   computed: {
     ...mapGetters(["cantidadJuegosTotales", "juegosDisponibles"]),
